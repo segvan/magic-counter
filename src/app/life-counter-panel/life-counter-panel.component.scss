@@ -1,0 +1,30 @@
+.card {       
+    width: 50%;
+    min-height: 200px;
+}
+
+.rotate {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.icon-large {
+    font-size: 2.4em;
+}
+
+.life-total{
+    font-size: 3.2em;
+}
+
+.counter-button:link, .counter-button:visited {    
+    color: rgba(0, 0, 0, 0.4);
+    transition: color 0.2s, font-size 0.2s;
+}
+
+.counter-button:hover, .counter-button:active {   
+    color: black;
+    font-size: 110%;
+}
