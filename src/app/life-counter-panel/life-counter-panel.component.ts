@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { LifeService } from '../services/life-service';
+import { Player } from '../models/player.model';
+import { PlayerService } from '../services/player.service';
 
 @Component({
   selector: 'app-life-counter-panel',
@@ -8,28 +9,21 @@ import { LifeService } from '../services/life-service';
 })
 export class LifeCounterPanelComponent implements OnInit {
 
-  @Input() rotate: boolean;
-  @Input() name: string;
-  @Input() startLife: number;
+  @Input() player: Player;
 
-  life: number;
-
-  constructor(private lifeService: LifeService) { }
+  constructor(private playerService: PlayerService) { }
 
   ngOnInit() {
-    this.life = this.startLife;
-
-    this.lifeService.resetLifeTotal.subscribe(() => {
-      this.life = this.startLife;
-    }
-    );
+    this.playerService.resetLifeTotal.subscribe((newTotal) => {
+      this.player.LifeTotal = newTotal;
+    });
   }
 
   decrementLife() {
-    this.life--;
+    this.player.LifeTotal--;
   }
 
   incrementLife() {
-    this.life++;
+    this.player.LifeTotal++;
   }
 }

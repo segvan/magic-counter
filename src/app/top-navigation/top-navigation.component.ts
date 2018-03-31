@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { LifeService } from '../services/life-service';
+import { PlayerService } from '../services/player.service';
+import { SettingsService } from '../services/settings.service';
 
 @Component({
   selector: 'app-top-navigation',
@@ -8,10 +9,10 @@ import { LifeService } from '../services/life-service';
 })
 export class TopNavigationComponent {
 
-  constructor(private lifeService: LifeService) {
+  constructor(private playerService: PlayerService, private settingsService: SettingsService) {
   }
 
   newGame() {
-    this.lifeService.resetLifeTotal.next();
+    this.playerService.resetLifeTotal.next(this.settingsService.getInitialLifeTotal());
   }
 }

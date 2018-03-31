@@ -1,5 +1,4 @@
-.card {       
-    width: 50%;
+.card {   
     min-height: 200px;
 }
 
@@ -24,7 +23,7 @@
     transition: color 0.2s, font-size 0.2s;
 }
 
-.counter-button:hover, .counter-button:active {   
+.counter-button:hover {   
     color: black;
     font-size: 110%;
 }

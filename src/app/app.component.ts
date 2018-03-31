@@ -1,24 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { LifeService } from './services/life-service';
+import { Player } from './models/player.model';
+import { PlayerService } from './services/player.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  rotate: boolean;
-  opponentName: string;
-  myName: string;
-  startLife: number;
+  opponent: Player;
+  me: Player;
 
-  constructor(private lifeServce: LifeService) {
+  constructor(private playerService: PlayerService) {
   }
 
   ngOnInit() {
-    this.rotate = false;
-    this.opponentName = "Opponent";
-    this.myName = "Me";
-    this.startLife = 20;
+    const players = this.playerService.getPlayers();
+    this.opponent = players[0];
+    this.me = players[1];
   }
 }

@@ -1,20 +1,20 @@
-<div class="card ml-auto mr-auto" [ngClass]="{'rotate': rotate }">
+<div class="card" [ngClass]="{'rotate': player.Reversed }">
   <div class="card-header">
-    <h4>{{name}}</h4>
+    <h4>{{player.Name}}</h4>
   </div>
   <div class="card-body">
     <div class="card-text">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col col-12 col-sm-4 text-center">
+          <div class="col text-center">
             <a class="counter-button" (click)="decrementLife()">
               <i class="ion-ios-remove-circle-outline icon-large"></i>
             </a>
           </div>
-          <div class="col col-12 col-sm-4 text-center">
-            <span class="life-total">{{life}}</span>
+          <div class="col text-center">
+            <span class="life-total">{{player.LifeTotal}}</span>
           </div>
-          <div class="col col-12 col-sm-4 text-center">
+          <div class="col text-center">
             <a class="counter-button" (click)="incrementLife()">
               <i class=" ion-ios-add-circle-outline icon-large "></i>
             </a>
