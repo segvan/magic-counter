@@ -1,5 +1,7 @@
 import { Configuration } from "../models/configuration.model";
+import { Injectable } from "@angular/core";
 
+Injectable()
 export class SettingsService {
 
     private _configuration: Configuration;

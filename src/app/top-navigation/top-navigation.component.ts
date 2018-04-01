@@ -1,8 +1,7 @@
-import { Component, OnInit, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 import { PlayerService } from '../services/player.service';
 import { SettingsService } from '../services/settings.service';
-import { NgForm } from '@angular/forms';
-import { Configuration } from '../models/configuration.model';
+import { AlertService } from '../services/alert.service';
 
 @Component({
   selector: 'app-top-navigation',
@@ -11,10 +10,13 @@ import { Configuration } from '../models/configuration.model';
 })
 export class TopNavigationComponent {
 
-  constructor(private playerService: PlayerService, private settingsService: SettingsService) {
+  constructor(private playerService: PlayerService,
+    private settingsService: SettingsService,
+    private alserService: AlertService) {
   }
 
   newGame() {
+    this.alserService.showInfo('New game starts now.');
     this.playerService.resetLifeTotal.next(this.settingsService.configuration.InitialLifeTotal);
   }
 }

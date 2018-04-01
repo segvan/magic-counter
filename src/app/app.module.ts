@@ -7,13 +7,18 @@ import { PlayerService } from './services/player.service';
 import { SettingsService } from './services/settings.service';
 import { FormsModule } from '@angular/forms';
 import { SettingsFormComponent } from './settings-form/settings-form.component';
+import { AlertsComponent } from './alerts/alerts.component';
+import { AlertService } from './services/alert.service';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopNavigationComponent,
     LifeCounterPanelComponent,
-    SettingsFormComponent
+    SettingsFormComponent,
+    AlertsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -22,6 +27,7 @@ import { SettingsFormComponent } from './settings-form/settings-form.component';
   providers: [
     PlayerService,
     SettingsService,
+    AlertService,
   ],
   bootstrap: [AppComponent]
 })

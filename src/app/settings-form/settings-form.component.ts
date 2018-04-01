@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef, Input } from '@angular/core';
 import { Configuration } from '../models/configuration.model';
 import { SettingsService } from '../services/settings.service';
+import { AlertService } from '../services/alert.service';
 
 @Component({
   selector: 'app-settings-form',
@@ -13,7 +14,7 @@ export class SettingsFormComponent implements OnInit {
 
   configuration: Configuration;
 
-  constructor(private settingsService: SettingsService) { }
+  constructor(private settingsService: SettingsService, private alertService: AlertService) { }
 
   ngOnInit() {
     this.configuration = this.settingsService.configuration;
@@ -21,6 +22,7 @@ export class SettingsFormComponent implements OnInit {
 
   onSubmit() {
     this.settingsService.configuration = this.configuration;
+    this.alertService.showSuccess("Configuration saved.");
     this.closeBtn.nativeElement.click();
   }
 }
