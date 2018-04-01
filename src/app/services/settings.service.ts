@@ -1,26 +1,42 @@
 import { Configuration } from "../models/configuration.model";
-import { Injectable } from "@angular/core";
+import { Injectable, OnInit } from "@angular/core";
+import { PersistanceService } from "./persistance.service";
 
-Injectable()
+@Injectable()
 export class SettingsService {
 
     private _configuration: Configuration;
 
     get configuration(): Configuration {
+        if (!this._configuration) {
+            this.loadConfiguration();
+        }
+
         return { ...this._configuration };
     }
 
     set configuration(config: Configuration) {
         this._configuration.InitialLifeTotal = config.InitialLifeTotal;
         this._configuration.PlayersNumber = config.PlayersNumber;
+
+        this.persistanceService.setConfiguration(this._configuration);
     }
 
-    constructor() {
-        this._configuration = <Configuration>{
-            InitialLifeTotal: 20,
-            ShowEnergyCounter: false,
-            WinBestOf: 2,
-            PlayersNumber: 2
-        };
+    constructor(private persistanceService: PersistanceService) {
+    }
+
+    loadConfiguration() {
+        const storageConfig = this.persistanceService.getConfiguration();
+        if (storageConfig) {
+            this._configuration = <Configuration>{};
+            this.configuration = storageConfig;
+        } else {
+            this._configuration = <Configuration>{
+                InitialLifeTotal: 20,
+                ShowEnergyCounter: false,
+                WinBestOf: 2,
+                PlayersNumber: 2
+            };
+        }
     }
 }

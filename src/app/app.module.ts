@@ -10,6 +10,7 @@ import { SettingsFormComponent } from './settings-form/settings-form.component';
 import { AlertsComponent } from './alerts/alerts.component';
 import { AlertService } from './services/alert.service';
 import { FooterComponent } from './footer/footer.component';
+import { PersistanceService } from './services/persistance.service';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { FooterComponent } from './footer/footer.component';
     PlayerService,
     SettingsService,
     AlertService,
+    PersistanceService,
   ],
   bootstrap: [AppComponent]
 })

@@ -11,6 +11,9 @@ export class PlayerService {
     private players: Player[];
 
     constructor(private settingsService: SettingsService) {
+    }
+
+    getPlayers() {
         this.players = <Player[]>[
             <Player>{
                 Id: 1,
@@ -25,9 +28,6 @@ export class PlayerService {
                 LifeTotal: this.settingsService.configuration.InitialLifeTotal
             }
         ];
-    }
-
-    getPlayers() {
         return this.players;
     }
 }
