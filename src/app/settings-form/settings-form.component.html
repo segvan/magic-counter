@@ -1,0 +1,30 @@
+<div class="modal fade" [id]="dialogId" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <form (ngSubmit)="onSubmit()" #f="ngForm">
+        <div class="modal-header">
+          <h5 class="modal-title" id="settingsModalLabel">Settings</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="lifeNumber">Initial life total *</label>
+            <input type="number" name="lifeNumber" [(ngModel)]="configuration.InitialLifeTotal" class="form-control" id="lifeNumber"
+              required>
+          </div>
+          <div class="form-group">
+            <label for="playersNumber">Players number *</label>
+            <input type="number" name="playersNumber" [(ngModel)]="configuration.PlayersNumber" class="form-control" id="playersNumber"
+              required readonly>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light" data-dismiss="modal" #closeSettingsDialog>Close</button>
+          <button type="submit" [disabled]="!f.valid" class="btn btn-outline-secondary">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

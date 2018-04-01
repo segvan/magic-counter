@@ -16,13 +16,13 @@ export class PlayerService {
                 Id: 1,
                 Name: 'Opponent',
                 Reversed: false,
-                LifeTotal: this.settingsService.getInitialLifeTotal()
+                LifeTotal: this.settingsService.configuration.InitialLifeTotal
             },
             <Player>{
                 Id: 2,
                 Name: 'Me',
                 Reversed: false,
-                LifeTotal: this.settingsService.getInitialLifeTotal()
+                LifeTotal: this.settingsService.configuration.InitialLifeTotal
             }
         ];
     }

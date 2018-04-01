@@ -10,18 +10,19 @@
       <li class="nav-item">
         <a class="btn btn-lg btn-light" role="button" (click)="newGame()">New</a>
       </li>
-      <li class=" nav-item">
-        <a class="btn btn-lg btn-light" role="button">Settings</a>
-      </li>
       <li class="nav-item">
         <a class="btn btn-lg btn-light" role="button">Save</a>
       </li>
-      <li class="nav-item">
-        <a class="btn btn-lg btn-light" role="button">Statistics</a>
+      <li class=" nav-item">
+        <a class="btn btn-lg btn-light" role="button" data-toggle="modal" data-target="#settingsModal">Settings</a>
       </li>
       <li class="nav-item">
-        <a class="btn btn-lg btn-outline-secondary" role="button">Clear</a>
+        <a class="btn btn-lg btn-outline-secondary" role="button">Statistics</a>
       </li>
+      <!-- <li class="nav-item">
+        <a class="btn btn-lg btn-light" role="button">Clear</a>
+      </li> -->
     </ul>
   </div>
 </nav>
+<app-settings-form dialogId="settingsModal"></app-settings-form>

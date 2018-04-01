@@ -5,15 +5,19 @@ import { TopNavigationComponent } from './top-navigation/top-navigation.componen
 import { LifeCounterPanelComponent } from './life-counter-panel/life-counter-panel.component';
 import { PlayerService } from './services/player.service';
 import { SettingsService } from './services/settings.service';
+import { FormsModule } from '@angular/forms';
+import { SettingsFormComponent } from './settings-form/settings-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopNavigationComponent,
-    LifeCounterPanelComponent
+    LifeCounterPanelComponent,
+    SettingsFormComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [
     PlayerService,
