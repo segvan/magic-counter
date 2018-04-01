@@ -2,12 +2,29 @@
     min-height: 200px;
 }
 
+.additional-info {
+    min-height: 40px;
+}
+
 .rotate {
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
     -o-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
+}
+
+.icon-turn {
+     -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    display: inline-block;
+}
+
+.icon-medium{
+    font-size: 1.6em;
 }
 
 .icon-large {
@@ -18,12 +35,12 @@
     font-size: 3.2em;
 }
 
-.counter-button:link, .counter-button:visited {    
-    color: rgba(0, 0, 0, 0.4);
-    transition: color 0.2s, font-size 0.2s;
+.res-link-button {    
+    color: rgba(0, 0, 0, 0.3) !important;
+    transition: color 0.3s, font-size 0.1s;
 }
 
-.counter-button:hover {   
-    color: black;
-    font-size: 110%;
+.res-link-button:hover {   
+    color: black !important;
+    font-size: 105%;
 }

@@ -7,7 +7,7 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col text-center">
-            <a class="counter-button" (click)="decrementLife()">
+            <a class="res-link-button" (click)="decrementLife()">
               <i class="ion-ios-remove-circle-outline icon-large"></i>
             </a>
           </div>
@@ -15,9 +15,24 @@
             <span class="life-total">{{player.LifeTotal}}</span>
           </div>
           <div class="col text-center">
-            <a class="counter-button" (click)="incrementLife()">
-              <i class=" ion-ios-add-circle-outline icon-large "></i>
+            <a class="res-link-button" (click)="incrementLife()">
+              <i class=" ion-ios-add-circle-outline icon-large"></i>
             </a>
+          </div>
+        </div>
+        <div class="row additional-info">
+          <div class="col text-center">
+
+          </div>
+          <div class="col text-center">
+
+          </div>
+          <div class="col col-1 text-right">
+            <div class="icon-turn">
+              <a class="res-link-button" (click)="reversePanel()">
+                <i class="ion-ios-swap icon-medium"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>

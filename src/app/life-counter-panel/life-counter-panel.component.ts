@@ -26,4 +26,8 @@ export class LifeCounterPanelComponent implements OnInit {
   incrementLife() {
     this.player.LifeTotal++;
   }
+
+  reversePanel() {
+    this.player.Reversed = !this.player.Reversed;
+  }
 }
