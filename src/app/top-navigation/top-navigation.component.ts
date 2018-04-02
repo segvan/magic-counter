@@ -33,4 +33,8 @@ export class TopNavigationComponent implements OnInit {
     this.alserService.showInfo('New game starts now.');
     this.playerService.resetLifeTotal.next(this.settingsService.configuration.InitialLifeTotal);
   }
+
+  saveStatistics() {
+    this.alserService.showSuccess('Current game saved.');
+  }
 }
