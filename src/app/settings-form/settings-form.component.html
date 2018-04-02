@@ -19,6 +19,14 @@
             <input type="number" name="playersNumber" [(ngModel)]="configuration.PlayersNumber" class="form-control" id="playersNumber"
               required readonly>
           </div>
+          <div class="form-group">
+            <label for="showEnergyCounter">Show energy counters</label>
+            <select name="showEnergyCounter" [(ngModel)]="configuration.ShowEnergyCounter" class="form-control" id="showEnergyCounter"
+              disabled>
+              <option [value]="false">No</option>
+              <option [value]="true">Yes</option>
+            </select>
+          </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-light" data-dismiss="modal" #closeSettingsDialog>Close</button>
