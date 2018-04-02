@@ -18,6 +18,7 @@ export class SettingsService {
     set configuration(config: Configuration) {
         this._configuration.InitialLifeTotal = config.InitialLifeTotal;
         this._configuration.PlayersNumber = config.PlayersNumber;
+        this._configuration.ShowEnergyCounter = config.ShowEnergyCounter;
 
         this.persistanceService.setConfiguration(this._configuration);
     }
