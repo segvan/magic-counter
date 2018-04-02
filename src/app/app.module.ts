@@ -15,6 +15,7 @@ import { StatisticsComponent } from './statistics/statistics.component';
 import { GameBoardComponent } from './game-board/game-board.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { AppRoutingModule } from './app-routing.module';
+import { GameService } from './services/game.service';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { AppRoutingModule } from './app-routing.module';
     SettingsService,
     AlertService,
     PersistanceService,
+    GameService,
   ],
   bootstrap: [AppComponent]
 })

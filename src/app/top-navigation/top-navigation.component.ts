@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { PlayerService } from '../services/player.service';
 import { SettingsService } from '../services/settings.service';
 import { AlertService } from '../services/alert.service';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/map';
+import { GameService } from '../services/game.service';
 
 @Component({
   selector: 'app-top-navigation',
@@ -15,7 +15,7 @@ export class TopNavigationComponent implements OnInit {
 
   currentRoute: string;
 
-  constructor(private playerService: PlayerService,
+  constructor(private gameService: GameService,
     private settingsService: SettingsService,
     private alserService: AlertService,
     private router: Router, ) {
@@ -31,10 +31,11 @@ export class TopNavigationComponent implements OnInit {
 
   newGame() {
     this.alserService.showInfo('New game starts now.');
-    this.playerService.resetLifeTotal.next(this.settingsService.configuration.InitialLifeTotal);
+    this.gameService.resetLifeTotal.next(this.settingsService.configuration.InitialLifeTotal);
   }
 
   saveStatistics() {
     this.alserService.showSuccess('Current game saved.');
+    this.gameService.saveGame.next();
   }
 }

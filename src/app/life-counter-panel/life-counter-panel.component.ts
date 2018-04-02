@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Player } from '../models/player.model';
-import { PlayerService } from '../services/player.service';
+import { GameService } from '../services/game.service';
 
 @Component({
   selector: 'app-life-counter-panel',
@@ -11,10 +11,10 @@ export class LifeCounterPanelComponent implements OnInit {
 
   @Input() player: Player;
 
-  constructor(private playerService: PlayerService) { }
+  constructor(private gameService: GameService) { }
 
   ngOnInit() {
-    this.playerService.resetLifeTotal.subscribe((newTotal) => {
+    this.gameService.resetLifeTotal.subscribe((newTotal) => {
       this.player.LifeTotal = newTotal;
     });
   }
