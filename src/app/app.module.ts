@@ -11,6 +11,10 @@ import { AlertsComponent } from './alerts/alerts.component';
 import { AlertService } from './services/alert.service';
 import { FooterComponent } from './footer/footer.component';
 import { PersistanceService } from './services/persistance.service';
+import { StatisticsComponent } from './statistics/statistics.component';
+import { GameBoardComponent } from './game-board/game-board.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -19,11 +23,15 @@ import { PersistanceService } from './services/persistance.service';
     LifeCounterPanelComponent,
     SettingsFormComponent,
     AlertsComponent,
-    FooterComponent
+    FooterComponent,
+    StatisticsComponent,
+    GameBoardComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule,
   ],
   providers: [
     PlayerService,

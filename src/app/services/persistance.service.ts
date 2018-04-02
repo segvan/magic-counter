@@ -3,7 +3,6 @@ import { Player } from "../models/player.model";
 import { AlertService } from "./alert.service";
 import { Injectable } from "@angular/core";
 
-@Injectable()
 export class PersistanceService {
     private readonly _configKey = "mc-config";
     private readonly _playersKey = "mc-players";
@@ -12,8 +11,6 @@ export class PersistanceService {
     private _configuration: Configuration;
     private _players: Player[];
 
-    constructor(private alertService: AlertService) { }
-
     getConfiguration(): Configuration {
         let result;
         const config = localStorage.getItem(this._configKey);
@@ -21,7 +18,7 @@ export class PersistanceService {
             try {
                 result = JSON.parse(config);
             } catch (exc) {
-                this.alertService.showWarning("Unable to load configuration.");
+                console.log("Unable to load configuration.");
             }
         }
 
