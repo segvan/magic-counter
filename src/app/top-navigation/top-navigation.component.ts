@@ -36,7 +36,8 @@ export class TopNavigationComponent implements OnInit {
   }
 
   saveStatistics() {
-    this.alserService.showSuccess('Current game saved.');
+    //this.alserService.showSuccess('Current game saved.');
+    this.alserService.showSuccess('Work in progress!');
     this.gameService.saveGame.next();
   }
 }
