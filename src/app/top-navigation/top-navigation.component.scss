@@ -3,6 +3,20 @@
     margin-right: 10px;
 }
 
+.navbar-brand{
+    font-size: 1.35rem;
+}
+
 .btn-outline-secondary {
     color: black;
+}
+
+.menu-button {
+    font-size: 1.35rem;
+    font-weight: normal;
+}
+
+a:hover.menu-button {
+    text-decoration: none;
+    color: #212529;
 }
