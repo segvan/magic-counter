@@ -7,16 +7,16 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col text-center">
-            <a class="res-link-button" (click)="decrementLife()">
-              <i class="ion-ios-remove-circle-outline icon-large"></i>
+            <a mat-mini-fab color="primary" (click)="decrementLife()">
+              <mat-icon>remove</mat-icon>
             </a>
           </div>
           <div class="col text-center">
             <span class="life-total">{{player.LifeTotal}}</span>
           </div>
           <div class="col text-center">
-            <a class="res-link-button" (click)="incrementLife()">
-              <i class=" ion-ios-add-circle-outline icon-large"></i>
+            <a mat-mini-fab color="primary" (click)="incrementLife()">
+              <mat-icon>add</mat-icon>
             </a>
           </div>
         </div>

@@ -2,6 +2,10 @@
     min-height: 200px;
 }
 
+.card-header {
+    background-color: #b0bec5;
+}
+
 .additional-info {
     min-height: 40px;
 }
@@ -33,14 +37,4 @@
 
 .life-total{
     font-size: 3.2em;
-}
-
-.res-link-button {    
-    color: rgba(0, 0, 0, 0.3) !important;
-    transition: color 0.3s, font-size 0.1s;
-}
-
-.res-link-button:hover {   
-    color: black !important;
-    font-size: 105%;
 }

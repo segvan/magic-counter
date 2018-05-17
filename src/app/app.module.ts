@@ -18,6 +18,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { GameService } from './services/game.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { MatButtonModule, MatIconModule } from '@angular/material'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +37,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatButtonModule,
+    MatIconModule,
   ],
   providers: [
     PlayerService,
