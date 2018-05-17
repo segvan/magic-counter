@@ -16,6 +16,7 @@ import { GameBoardComponent } from './game-board/game-board.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { AppRoutingModule } from './app-routing.module';
 import { GameService } from './services/game.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { GameService } from './services/game.service';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
   ],
   providers: [
     PlayerService,
