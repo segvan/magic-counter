@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SettingsService } from '../services/settings.service';
 import { AlertService } from '../services/alert.service';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
-import 'rxjs/add/operator/filter';
-import 'rxjs/add/operator/map';
+import { filter } from 'rxjs/operators';
 import { GameService } from '../services/game.service';
 
 @Component({
@@ -23,7 +22,9 @@ export class TopNavigationComponent implements OnInit {
 
   ngOnInit() {
     this.router.events
-      .filter((event) => event instanceof NavigationEnd)
+      .pipe(
+        filter((event) => event instanceof NavigationEnd)
+      )
       .subscribe((event) => {
         this.currentRoute = this.router.url;
       });

@@ -1,4 +1,4 @@
-import { Subject } from "rxjs/Subject";
+import { Subject } from "rxjs";
 import { Player } from "../models/player.model";
 import { SettingsService } from "./settings.service";
 import { Injectable } from "@angular/core";

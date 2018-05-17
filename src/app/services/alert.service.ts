@@ -1,4 +1,4 @@
-import { Subject } from "rxjs/Subject";
+import { Subject } from "rxjs";
 import { AlertParams } from "../models/alert-params.model";
 import { AlertTypes } from "../enums/alert-typs.enum";
 
