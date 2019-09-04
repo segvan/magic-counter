@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "preinstall": "npm i -g @angular/cli@6.0.3",
+    "preinstall": "npm i @angular/cli@6.0.3",
     "postinstall": "ng build --aot --prod",
     "start": "node server.js"
   },
