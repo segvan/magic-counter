@@ -2,6 +2,9 @@
   "name": "magic-counter",
   "version": "0.0.2",
   "license": "MIT",
+  "engines": {
+    "node": "10.1.0"
+  },
   "scripts": {
     "ng": "ng",
     "build": "ng build --prod",
