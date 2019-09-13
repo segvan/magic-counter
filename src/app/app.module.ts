@@ -18,7 +18,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { GameService } from './services/game.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatButtonModule, MatIconModule } from '@angular/material'
+import { MatButtonModule, MatIconModule } from '@angular/material';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment'
 
 @NgModule({
   declarations: [
@@ -39,6 +41,7 @@ import { MatButtonModule, MatIconModule } from '@angular/material'
     BrowserAnimationsModule,
     MatButtonModule,
     MatIconModule,
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [
     PlayerService,

@@ -1,0 +1,21 @@
+{
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "resources": {
+        "files": [
+          "/favicon.ico",
+          "/manifest.json",
+          "/index.html",
+          "/assets/ionicons.woff2",
+          "/assets/logo_128.png",
+          "/assets/logo_512.png",
+          "/*.css",
+          "/*.js"
+        ]
+      }
+    }
+  ]
+}
