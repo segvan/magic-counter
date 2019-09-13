@@ -1,7 +1,7 @@
 {
   "name": "Magic the Gathering Online Life Counter",
   "short_name": "Magic Life Counter",
-  "start_url": "/",
+  "start_url": "/index.html",
   "display": "standalone",
   "icons": [
     {
