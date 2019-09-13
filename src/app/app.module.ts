@@ -20,7 +20,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatButtonModule, MatIconModule } from '@angular/material';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment'
 
 @NgModule({
   declarations: [
@@ -41,7 +40,7 @@ import { environment } from '../environments/environment'
     BrowserAnimationsModule,
     MatButtonModule,
     MatIconModule,
-    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: true }),
   ],
   providers: [
     PlayerService,
