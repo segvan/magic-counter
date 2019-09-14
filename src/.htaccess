@@ -1,0 +1,6 @@
+# Checks if the rewrite mod is on.
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	RewriteCond %{REQUEST_URI} /game-board$
+	RewriteRule . / [R=302,L]
+</IfModule>
