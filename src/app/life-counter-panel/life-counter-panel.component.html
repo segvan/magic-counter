@@ -1,6 +1,17 @@
 <div class="card" [ngClass]="{'rotate': player.Reversed }">
   <div class="card-header">
-    <h4>{{player.Name}}</h4>
+    <div class="row">
+      <div class="col col-8">
+        <h4>{{player.Name}}</h4>
+      </div>
+      <div class="col col-4 text-right">
+        <div class="icon-turn">
+          <a (click)="reversePanel()">
+            <mat-icon class="icon-medium">rotate_left</mat-icon>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="card-body">
     <div class="card-text">
@@ -26,13 +37,6 @@
           </div>
           <div class="col text-center">
 
-          </div>
-          <div class="col col-1 text-right">
-            <div class="icon-turn">
-              <a class="res-link-button" (click)="reversePanel()">
-                <i class="ion-ios-swap icon-medium"></i>
-              </a>
-            </div>
           </div>
         </div>
       </div>
