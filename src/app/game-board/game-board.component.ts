@@ -5,6 +5,7 @@ import { PlayerService } from '../services/player.service';
 @Component({
   selector: 'app-game-board',
   templateUrl: './game-board.component.html',
+  styles: [".row{ margin-top: 1.8rem !important; }"]
 })
 export class GameBoardComponent implements OnInit {
 
